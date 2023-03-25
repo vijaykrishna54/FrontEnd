@@ -1,0 +1,21 @@
+body {
+    background-color:var(--secondary);
+}
+.form-control{
+    background-color: var(--tertiary);
+    border-radius: 15px;
+   
+}
+.submit-button {
+    background-color: var(--primary) !important;
+    color:var(--secondary) !important;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+}
+.image {
+    width: 322px;
+    min-height: 322px;
+    background-color: var(--primary);
+}
