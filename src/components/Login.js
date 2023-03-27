@@ -23,7 +23,7 @@ const Login = () => {
   };
   const sendRequest = async () => {
     const res = await axios
-      .post(`http://localhost:5000/auth/login`, {
+      .post(`https://backend-production-fe64.up.railway.app//auth/login`, {
         email: inputs.email,
         password: inputs.password,
       })

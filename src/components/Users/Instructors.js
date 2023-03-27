@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Instructor from './Instructor';
 import './User.css';
-const URL = `http://localhost:5000/instructors`;
+const URL = `https://backend-production-fe64.up.railway.app/instructors`;
 
 
 const fetchHandler = async() =>{
