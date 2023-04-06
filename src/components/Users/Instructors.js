@@ -9,7 +9,8 @@ console.log(URL);
 
 
 const fetchHandler = async() => {
-  return await axios.get(URL).then((res)=>res.data)
+  return await axios.get(URL).then((res)=>{console.log(res.data)})
+  
 };
 const Instructors = () => {
   const [instructors, setInstructors] = useState();
