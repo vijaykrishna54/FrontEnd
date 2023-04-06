@@ -3,7 +3,7 @@ import axios from 'axios';
 import Instructor from './Instructor';
 import './User.css';
 
-const URL = `http://localhost:${process.env.REACT_APP_PORT}/instructors`;
+const URL = `${process.env.REACT_APP_BACKEND_URL}/instructors`;
 
 console.log(URL);
 
