@@ -115,7 +115,7 @@ const Login = () => {
 
   const sendRequest = async () => {
     const res = await axios.post(
-      `http://localhost:${process.env.REACT_APP_PORT}/auth/login`,
+      `${process.env.REACT_APP_BACKEND_URL}/auth/login`,
       {
         email: inputs.email,
         password: inputs.password,
