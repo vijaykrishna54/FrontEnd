@@ -135,7 +135,7 @@ div {
   
     align-self: flex-start; 
     font-size: var(--fontSize36);
-    margin: 0;
+    margin: 0 0 20px 0;
     
     
 }
@@ -145,7 +145,7 @@ div {
 
 .heading {
     display: flex;
-    
+    margin: 0 0 15px 0;
     justify-content: space-around;
     width: 100%;
     
@@ -207,8 +207,12 @@ div {
     display: flex;
     justify-content: flex-start;
     width: 20%;
-    margin: 0 10px 10px 10px;
+    margin: 0 15px 10px 10px;
     font-size: var(--fontSize36);
+    padding: 0 20px 0 0;
+}
+.sidebarLogo {
+    width: 100%;
 }
 .club-detail .detail {
     display: flex;
@@ -224,28 +228,40 @@ footer{
     background-color: var(--primary);
     min-height: 165px;
     margin: 40px 0 0 0;
-    display: flex;
+    /* display: flex; */
     color:var(--secondary);
     padding: 35px 0 0 0;
 }
+.footer-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 
 .footer-menu {
-    /* display: flex; */
-    display: flex;
-    align-items: flex-end;
-    flex-grow: 1;
 
+    display: flex;
+    
+    
+
+}
+.sidebar {
+   
+    min-height: 60vh !important;
+  
+    
 }
 .footer-menu ul {
     list-style: none;
     margin: 0;
-    padding: 0 30px 0 0;
+    /* padding: 0 30px 0 0; */
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    font-weight: 400;
 }
 .footer-menu ul li {
-    line-height: 35px;
+    line-height: 0px;
 }
 .footer-menu ul li a{
     text-decoration: none;
@@ -258,9 +274,10 @@ footer{
 .social-links {
     display: flex;
     align-items: center;
+    
 
     flex-direction: column;
 }
-.social-links > * {
-    margin: 0;
+.social-links img {
+    margin: 5px 15px 0 0;
 }

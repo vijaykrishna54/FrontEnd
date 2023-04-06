@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./User.css";
 import React from 'react';
+import { containerClasses } from '@mui/system';
 
 
 const Instructor = (props) => {
@@ -17,20 +18,38 @@ const Instructor = (props) => {
       };
   
     return (
-    <div className="card">
+      <a href={`instructors/${_id}`}>
+      <div className="datacard">
+        
       <img src={image} alt={name} />
-      <h3>Name : {name}</h3>
-      {/* <h3>User Id : {_id}</h3> */}
-      <h3>About : {description}</h3>
-      <h3>Contact : {contact}</h3>
-      <h3>Email : {email}</h3>
-      <Button LinkComponent={Link} to={`/instructors/${_id}`} sx={{ mt: "auto" }}>
+      <div className='infoContainer'>
+      <div>
+        <h3>{name}</h3>
+        {/* <h3>User Id : {_id}</h3> */}
+        <h5>Level : 1</h5>
+      </div>
+
+    <div>
+        <h5>Skill: {description}</h5>
+    </div>
+
+    </div>
+      
+      {/* <h3>Contact : {contact}</h3> */}
+      {/* <h3>Email : {email}</h3> */}
+      {/* <div>
+      <Button className="button" LinkComponent={Link} to={`/instructors/${_id}`} sx={{ mt: "auto" }}>
         Update
       </Button>
-      <Button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
+      <Button className="button"  onClick={deleteHandler} sx={{ mt: "auto" }}>
         Delete
       </Button>
+      </div> */}
+      
     </div>
+    </a>
+    
+  
   )
 }
 

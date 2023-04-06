@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import AddInstructor from '../components/Addinstructor';
 import Instructor from '../components/Users/Instructor';
+import DashFooter from './DashFooter';
 
 const ManageInstructor = () => {
   return (
@@ -14,6 +15,7 @@ const ManageInstructor = () => {
         </div>
       
       </div>
+      <DashFooter/>
     </div>
   )
 }

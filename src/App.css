@@ -57,3 +57,35 @@ main{
 .icon, .link_text{
   font-size: 20px;
 }
+.footer-dash {
+  height: 60px;
+    background-color: var(--primary);
+    width: 100%;
+    /* position: fixed; */
+    /* padding: 0 0 0 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:var(--secondary);
+    margin: 30px 0 0 0;
+}
+.footerLogo {
+  width: 80%;
+  margin: 0 0 0 100px;
+}
+.footerLogo img {
+  width: 15%;
+}
+.menu {
+  display: flex;
+}
+.footerMenu {
+  width: 100%;
+  
+  flex-direction: row;
+  justify-content: unset;
+  flex-wrap: nowrap;
+}
+.footerMenu li {
+  width: 50px;
+}

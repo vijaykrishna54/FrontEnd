@@ -1,30 +1,40 @@
-import React from 'react'
-
+import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar';
-import Instructors from  '../components/Users/Instructors';
+import Instructors from '../components/Users/Instructors';
+import Trainee from '../components/Users/Trainees';
+import DashFooter from './DashFooter';
 
 const Dashboard = () => {
-  return (
-   
-    <div >
-      <div>
-          <Sidebar/>
-        
-      </div>
-      <div className='container'>
-        <div className="data">
-        {/* <h1>You can View instructors / Trainees from here!</h1> */}
-        <button>Current Instructors</button><button>Current Trainees</button>
-        <br/>
-        <Instructors />
-        </div>
-       
-      </div>
-      
-    </div>
-    
-   
-  )
+const [activeButton, setActiveButton] = useState('instructors');
+const handleButtonClick = (button) => {
+setActiveButton(button);
+};
+
+return (
+<div>
+
+<Sidebar />
+
+<div className='container'>
+<div className="data">
+    {/* {<input type='text' id='search' ></input>} */}
+<div className='slider'>
+<button className={activeButton === 'instructors' ? 'active' : ''} onClick={() => handleButtonClick('instructors')}>Current Instructors</button>
+<button className={activeButton === 'trainees' ? 'active' : ''} onClick={() => handleButtonClick('trainees')}>Current Trainees</button>
+</div>
+{activeButton === 'instructors' && <Instructors />}
+{activeButton === 'trainees' && <Trainee />}
+</div>
+</div>
+<DashFooter/>
+
+
+
+
+</div>
+)
 }
 
 export default Dashboard
+
+

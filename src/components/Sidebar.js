@@ -48,9 +48,9 @@ function Sidebar  ({children}) {
   ]
   return (
     <div>
-      <div style={{width: isOpen ? "400px" : "80px"}}className='sidebar'>
+      <div style={{width: isOpen ? "310px" : "80px"}}className='sidebar'>
         <div className='top_section'> 
-          <h1  style={{display: isOpen ? "flex" : "none"}} className='logo'>SPORTIFY</h1>
+          <h1  style={{display: isOpen ? "flex" : "none"}} className='logo'><img src="/images/Logo.png" className='sidebarLogo' alt="sportify logo"/></h1>
           <div style={{marginLeft: isOpen ? "50px" : "20px"}} className='bars'>
               <FaBars onClick={toggle}/>
             </div>

@@ -31,13 +31,13 @@ const AddTrainee = () => {
 
   const sendRequest = async () => {
     await axios
-      .post(`http://localhost:5000/trainees`, {
+      .post(`http://localhost:${process.env.REACT_APP_PORT}/trainees`, {
         name: String(inputs.name),
         email: String(inputs.email),
         description: String(inputs.description),
         contact: Number(inputs.contact),
         image: String(inputs.image),
-        available: Boolean(checked),
+        available: Boolean(checked)
       })
       .then((res) => res.data);
   };

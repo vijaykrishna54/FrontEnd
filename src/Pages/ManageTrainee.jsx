@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../components/Sidebar';
 import AddTrainee from '../components/Addtrainee';
-
+import DashFooter from './DashFooter';
 
 const ManageTrainee = () => {
   return (
@@ -13,6 +13,7 @@ const ManageTrainee = () => {
       <AddTrainee/>
       </div>
       </div>
+      <DashFooter/>
     </div>
   )
 }

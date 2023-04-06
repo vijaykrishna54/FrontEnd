@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Trainee from './Trainee';
-const URL = `http://localhost:${process.env.PORT}/trainees`;
+const URL = `http://localhost:${process.env.REACT_APP_PORT}/trainees`;
 
 const fetchHandler = async() =>{
   return await axios.get(URL).then((res)=>res.data)
@@ -15,15 +15,15 @@ const Trainees = () => {
   
   console.log(trainees);
   return (
-    <div>
-      <ul>
+    <div className='container'>
+     
         {trainees && trainees.map((trainee, i) => (
-          <div key={i}>
+         
             <Trainee trainee={trainee}/>
             
-          </div>
+          
         ))}
-      </ul>
+      
     </div>
   )
 }

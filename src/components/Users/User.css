@@ -8,7 +8,7 @@ ul {
   }
   li {
     padding: 10px;
-    margin: 10px;
+    margin: 5px 0 0 0;
     width: 250px;
     max-width: 250px;
     max-height: 400px;
@@ -16,17 +16,25 @@ ul {
     justify-content: flex-start;
   }
   
-  .card {
-    margin: auto;
-    padding: 5px;
-    height: 100%;
-    width: 30%;
-    box-shadow: 5px 5px 10px #ccc;
+  .datacard {
+    
+    width: 280px;
+    margin: 20px 20px 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: flex-start;
     align-content: flex-start; */
+  }
+  
+  .datacard:hover {
+    /* background-color: var(--primary);
+    color:var(--secondary);
+    transition: all 0.8s; */
+  }
+  .datacard img {
+    border-radius: 4px;
+    height: 192px;
   }
   .form > * {
    color:var(--tertiary) !important;
@@ -40,18 +48,53 @@ ul {
     color:var(--secondary) !important;
   }
   
-  .card > img {
-    width: 100%;
-    height: 50%;
-  }
-  .card article {
+  
+  .datacard article {
     padding: 5px;
   }
-  .card h3 {
-    padding: 4px;
+  .slider {
+    display: flex;
+    background-color: var(--tertiary);
+    width: 40%;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    gap: 15px;
   }
-  
-  .card p {
+  .slider button {
+    background-color: transparent;
+    font-size:16px;
+    border-radius: 50px;
+    padding: 03px;
+    width: 50%;
+    border: 0 none;
+    height: 30px;
+    color:var(--secondary);
+  }
+  .slider .active,.slider button:hover{
+    background-color: var(--primary);
+    
+    
+  }
+  .datacard .button {
+    background-color: var(--primary);
+    color:var(--secondary);
+    margin: 5px 5px 0 0;
+  }
+  .datacard .button:hover {
+    
+  }
+  .datacard p {
     padding: 3x;
   }
-  
+  .infoContainer
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 5px 0 0 0;
+  }
+
+  hr {
+    border:5px solid var(--primary);
+  }

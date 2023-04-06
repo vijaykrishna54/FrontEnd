@@ -2,10 +2,13 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Instructor from './Instructor';
 import './User.css';
-const URL = `https://backend-production-fe64.up.railway.app/instructors`;
+
+const URL = `http://localhost:${process.env.REACT_APP_PORT}/instructors`;
+
+console.log(URL);
 
 
-const fetchHandler = async() =>{
+const fetchHandler = async() => {
   return await axios.get(URL).then((res)=>res.data)
 };
 const Instructors = () => {
@@ -17,14 +20,15 @@ const Instructors = () => {
 
   console.log(instructors);
   return (
-    <div>
-      <ul>
+    <div className='container'>
+      
         {instructors && instructors.map((instructor, i) => (
-          <div key={i}>
+         
+          
             <Instructor instructor={instructor}/>
-          </div>
+         
         ))}
-      </ul>
+      
     </div>
   );
 };

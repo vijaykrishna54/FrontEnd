@@ -27,13 +27,13 @@ import {
   
     const sendRequest = async () => {
       await axios
-        .put(`http://localhost:${process.env.PORT}/trainees/${id}`, {
+        .put(`http://localhost:${process.env.REACT_APP_PORT}/trainees/${id}`, {
           name: String(inputs.name),
           email: String(inputs.email),
           description: String(inputs.description),
           contact: Number(inputs.contact),
           image: String(inputs.image),
-        //   available: Boolean(checked),
+          available: Boolean(checked),
         })
         .then((res) => res.data);
     };
@@ -116,7 +116,7 @@ import {
                     onChange={() => setChecked(!checked)}
                   />
                 }
-                // label="Available"
+                label="Available"
               />
   
               <Button variant="contained" type="submit">

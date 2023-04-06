@@ -12,6 +12,7 @@ import ManageInstructor from './Pages/ManageInstructor';
 import ManageTrainee from './Pages/ManageTrainee';
 import Settings from './Pages/Settings';
 import Statistics from './Pages/Statistics';
+
 import Logout from './Pages/Logout';
 
 function App() {
@@ -22,12 +23,12 @@ function App() {
       <Routes>
             <Route path="/" element={<LandingPage/>} exact/>
             <Route path="/login" element={<Login />} exact />
-            { isLoggedIn &&  <Route path ="/dashboard" element={<Dashboard />} /> }
-            { isLoggedIn &&  <Route path = "/manageinstructor" element = {<ManageInstructor/>}/>}
-            { isLoggedIn &&  <Route path = "/managetrainees" element = {<ManageTrainee/>}/> }
-            { isLoggedIn &&  <Route path = "/statistics" element = {<Statistics/>}/>}
-            { isLoggedIn &&  <Route path = "/settings" element = {<Settings/>}/>}
-            { isLoggedIn && <Route path = "/logout" element = {<Logout/>}/>}
+            {  <Route path ="/dashboard" element={<Dashboard />} /> }
+            {  <Route path = "/manageinstructor" element = {<ManageInstructor/>}/>}
+            {  <Route path = "/managetrainees" element = {<ManageTrainee/>}/> }
+            {  <Route path = "/statistics" element = {<Statistics/>}/>}
+            {  <Route path = "/settings" element = {<Settings/>}/>}
+            {  <Route path = "/logout" element = {<Logout/>}/>}
 
       </Routes>
    </React.Fragment>

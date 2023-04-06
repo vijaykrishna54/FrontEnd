@@ -32,8 +32,9 @@ const AddInstructor = () => {
   };
 
   const sendRequest = async () => {
+    console.log(`http://localhost:${process.env.REACT_APP_PORT}/instructors`);
     await axios
-      .post(`http://localhost:5000/instructors`, {
+      .post(`http://localhost:${process.env.REACT_APP_PORT}/instructors`, {
         name: String(inputs.name),
         email: String(inputs.email),
         description: String(inputs.description),
