@@ -115,7 +115,7 @@ const Login = () => {
 
   const sendRequest = async () => {
     const res = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/auth/login`,
+      `backend-production-fe64.up.railway.app/auth/login`,
       {
         email: inputs.email,
         password: inputs.password,
